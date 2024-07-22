@@ -1,0 +1,144 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-bottom: 50px; /* フッターの高さ分だけ下にスペースを確保 */
+}
+
+header {
+    background-color: #4caf50; /* 黄緑色 */
+    color: #fff; /* 白色 */
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid #81c784; /* 明るい黄緑色の枠線 */
+}
+
+header h1 {
+    margin: 0;
+    color: #fff; /* 白色 */
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-gallery img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.blue-box {
+    background-color: #e0f7fa; /* 水色 */
+    border: 1px solid #b2ebf2; /* 明るい水色 */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.speech-bubble {
+    display: flex;
+    align-items: center;
+    background: #ffcc80; /* オレンジ色 */
+    border: 1px solid #ffb74d;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+.speech-bubble::after {
+    display: none; /* 吹き出しの三角形を非表示にする */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px; /* テキストとアイコンの間隔 */
+}
+
+.content, .section {
+    margin-bottom: 20px;
+}
+
+.link {
+    color: #0277bd; /* 青色 */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.centered-note {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* スマートフォン向け */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .photo-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .blue-box {
+        padding: 10px;
+    }
+    
+    .speech-bubble {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px; /* アイコンとテキストの間隔 */
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        padding: 15px;
+    }
+    
+    .photo-gallery img {
+        max-width: 150px;
+    }
+    
+    .speech-bubble {
+        padding: 12px;
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+    }
+}
